@@ -20,7 +20,7 @@ class GUI2():
     def __init__(self, gui2):
         self.gui2 = gui2
         self.makeUp = apply_makeupCode.ApplyMakeup()
-        self.background_image = ImageTk.PhotoImage(Image.open("./demo.png"))
+        self.background_image = ImageTk.PhotoImage(Image.open("./background.png"))
         self.background = Label(self.gui2, image=self.background_image)
         self.background.pack(fill='both', expand=True)
         self.background.image = self.background_image 
@@ -128,20 +128,14 @@ class GUI2():
         
     def createBotton(self):
         
-        # Example labels that serve as placeholders for other widgets 
         Label(self.tool_bar, text="Lip", relief=RAISED,  bg = "cyan2").grid(row=1, column=0, padx=5, pady=3, ipadx=10)
         Label(self.tool_bar, text="EyeLiner", relief=RAISED, bg = "coral1").grid(row=1, column=1, padx=5, pady=3, ipadx=10)
     
-        # For now, when the buttons are clicked, they only call the clicked() method. We will add functionality later.
         Button(self.tool_bar, text="", bg = '#A00A14', command = partial(self.show, 160,10,20,0)).grid(row=2, column=0, padx=5, pady=5, sticky='w'+'e'+'n'+'s')
         Button(self.tool_bar, text="", bg = '#FF69F1', command= partial(self.show, 255,100,240,0)).grid(row=3, column=0, padx=5, pady=5, sticky='w'+'e'+'n'+'s')
         Button(self.tool_bar, text="", bg = '#CC6600', command= partial(self.show, 204,102,0,0)).grid(row=4, column=0, padx=5, pady=5, sticky='w'+'e'+'n'+'s')
         Button(self.tool_bar, text="", bg = '#A717B2', command= partial(self.show, 167,23,178,0)).grid(row=5, column=0, padx=5, pady=5, sticky='w'+'e'+'n'+'s') 
 
-        # Button(self.tool_bar, text="Red",    command=partial(self.show,160,10,20,0)).grid(row=2, column=0, padx=5, pady=5, sticky='w'+'e'+'n'+'s')
-        # Button(self.tool_bar, text="Blue",   command=partial(self.show,255,153,153,0)).grid(row=3, column=0, padx=5, pady=5, sticky='w'+'e'+'n'+'s')
-        # Button(self.tool_bar, text="Yellow", command=partial(self.show,92,190,56,0)).grid(row=4, column=0, padx=5, pady=5, sticky='w'+'e'+'n'+'s')
-        # Button(self.tool_bar, text="Green",  command=partial(self.show,167,23,178,0)).grid(row=5, column=0, padx=5, pady=5, sticky='w'+'e'+'n'+'s')
 
         # eyeliner       
         Button(self.tool_bar, text="", bg = '#000000', command = partial(self.show, 0,0,0 ,1)).grid(row=2, column=1, padx=5, pady=5, sticky='w'+'e'+'n'+'s')
@@ -149,10 +143,6 @@ class GUI2():
         Button(self.tool_bar, text="", bg = '#5CBF38', command=  partial(self.show, 92,190,56  ,1)).grid(row=4, column=1, padx=5, pady=5, sticky='w'+'e'+'n'+'s')
         Button(self.tool_bar, text="", bg = '#A717B2', command=  partial(self.show, 167,23,178 ,1)).grid(row=5, column=1, padx=5, pady=5, sticky='w'+'e'+'n'+'s')
 
-        # Button(self.tool_bar, text="Red",    command=partial( self.show,160,10,20,1)).grid(row=2,   column=1, padx=5, pady=5, sticky='w'+'e'+'n'+'s')
-        # Button(self.tool_bar, text="Black",   command=partial(self.show,0,0,0,1)).grid(row=3, column=1, padx=5, pady=5, sticky='w'+'e'+'n'+'s')
-        # Button(self.tool_bar, text="Yellow", command=partial( self.show,92,190,56,1)).grid(row=4,   column=1, padx=5, pady=5, sticky='w'+'e'+'n'+'s')
-        # Button(self.tool_bar, text="Green",  command=partial( self.show,167,23,178,1)).grid(row=5,  column=1, padx=5, pady=5, sticky='w'+'e'+'n'+'s')
 
         Button(self.tool_bar, text="DONE", command= self.doned).grid(row=6, columnspan = 2, padx=5, pady=5, sticky='w'+'e'+'n'+'s')
 
@@ -161,21 +151,11 @@ class GUI2():
         new_width = event.width
         new_height = event.height
 
-        self.background_image = Image.open("./demo.png").resize((new_width, new_height))
+        self.background_image = Image.open("./background.png").resize((new_width, new_height))
 
         self.background_image = ImageTk.PhotoImage(self.background_image)
         self.background.configure(image =  self.background_image)
 
-
-
-# if __name__ == "__main__":
-#     gui2 = Tk() # create gui2 window
-#     gui2.title("Digital Makeup with Video")
-#     gui2.geometry('1024x720')
-#     main = GUI2(gui2)
-#     main.create_Screen()
-#     # gui2.config(bg="skyblue")
-#     gui2.mainloop()
 
 
 

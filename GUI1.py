@@ -19,12 +19,11 @@ from skimage import color
 import sys
 import imutils
 import apply_makeupCode
-# import eyeb
 
 class GUI1():
     def __init__(self, gui1):
         self.gui1 = gui1
-        self.background_image = ImageTk.PhotoImage(Image.open("./demo.png"))
+        self.background_image = ImageTk.PhotoImage(Image.open("./background.png"))
         self.background = Label(self.gui1, image=self.background_image)
         self.background.pack(fill='both', expand=True)
         self.background.image = self.background_image 
@@ -199,7 +198,7 @@ class GUI1():
         new_width = event.width
         new_height = event.height
 
-        self.background_image = Image.open("./demo.png").resize((new_width, new_height))
+        self.background_image = Image.open("./background.png").resize((new_width, new_height))
 
         self.background_image = ImageTk.PhotoImage(self.background_image)
         self.background.configure(image =  self.background_image)
