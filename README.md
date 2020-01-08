@@ -32,7 +32,7 @@ _**python3 main.py**_\
     ![vid_main](images/image_ForREADME/vid_main.png)
     * Chọn `Start` để bắt đầu\
         ![vid_main](images/image_ForREADME/vid_op.png)
-        
+
         Tên | Chức năng
         --- | ---
         Lip | Dùng để tô môi bằng cách chọn các màu bên dưới
@@ -40,6 +40,9 @@ _**python3 main.py**_\
         DONE | Dùng để kết hợp nhiều tính năng bằng cách xác nhận 1 chức năng rồi xử dụng chức năng khác
     * Chọn `Close` để thoát
 3. `Our Team`\
-    Giới thiệu tên đề tài, giáo viên hướng dẫn và nhóm thực hiện
+    Giới thiệu tên đề tài, giáo viên hướng dẫn và nhóm thực hiện\
+    ![ot](images/image_ForREADME/ot.png)
+    * Chọn `Close` để thoát
+
 4. `Quit`\
     Dùng để thoát chương trình
