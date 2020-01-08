@@ -32,6 +32,7 @@ _**python3 main.py**_\
     ![vid_main](images/image_ForREADME/vid_main.png)
     * Chọn `Start` để bắt đầu\
         ![vid_main](images/image_ForREADME/vid_op.png)
+        
         Tên | Chức năng
         --- | ---
         Lip | Dùng để tô môi bằng cách chọn các màu bên dưới
