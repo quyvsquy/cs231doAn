@@ -1,13 +1,10 @@
 # Digital Face Makeup
-17520960 - Đặng Quốc Quy\
 17520967 - Đặng Hoàng Sang\
+17520960 - Đặng Quốc Quy\
 17521209 - Trần Vũ Hoàng Tú
 # Requirement
-- dlib
-- opencv
-- keras
-- tkinter
-- skimage
+- OS: Linux (tested)
+- ` pip3 install -r requirements.txt`
 # Usage
 _**python3 main.py**_\
 ![main](images/image_ForREADME/main.png)

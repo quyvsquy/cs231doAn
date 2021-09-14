@@ -1,0 +1,7 @@
+opencv-python
+dlib
+keras
+scikit-image
+numba
+imutils
+tensorflow
